@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>О нас — Магазин</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <a href="/index.html" id="logo">
+        <div class="logo">LOGO</div>
+      </a>
+      <div>
+        <div class="site-name">Магазин</div>
+        <div class="site-tagline">Товарчикофф</div>
+      </div>
+    </div>
+    <nav aria-label="Главное меню">
+      <a href="/index.html">Каталог</a>
+      <a href="../about/about.html">О нас</a>
+      <a href="../contacts/contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="about-title">
+      <h1 id="about-title">О нас</h1>
+      <p class="small text-muted">Обновлено 2025</p>
+
+      <div class="gallery" role="img" aria-label="Команда магазина"><img src="/img/team.png" alt="team" id="team"></div>
+
+      <h2>Наша миссия</h2>
+      <p>
+        Наша цель — предлагать качественные товары по честным ценам с удобным обслуживанием.
+        Мы выбираем продукты с заботой о клиентах и окружающей среде.
+      </p>
+
+      <h2>История</h2>
+      <p>
+        Компания основана в 2018 году. Сначала мы работали в локальном регионе, затем расширились
+        и стали доступнее для всей страны благодаря онлайн-продажам и надёжной логистике.
+      </p>
+
+      <h2>Команда</h2>
+      <div class="specs" aria-hidden="false">
+        <div class="spec"><strong>Иван</strong> — Генеральный директор</div>
+        <div class="spec"><strong>Ольга</strong> — Директор по продукту</div>
+        <div class="spec"><strong>Алексей</strong> — Логистика</div>
+      </div>
+
+      <h2>Ценности</h2>
+      <ul>
+        <li>Качество</li>
+        <li>Прозрачность</li>
+        <li>Клиентоориентированность</li>
+        <li>Ответственность</li>
+      </ul>
+    </section>
+
+    <aside class="card" aria-labelledby="about-contacts">
+      <h2 id="about-contacts">Контакты</h2>
+      <p class="small">Головной офис</p>
+      <address>
+        Улица Кирова 2<br />
+        Ярославль, Россия
+      </address>
+
+      <p class="small">Телефон</p>
+      <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+
+      <p class="small">Email</p>
+      <a href="mailto:info@shop.example">info@shop.example</a>
+
+      <div class="legal small text-muted" style="margin-top:12px;">
+        <a href="/terms.html" id="termsLink">Пользовательское соглашение</a>
+        <a href="/privacy.html" id="privacyLink">Политика конфиденциальности</a>
+        <a href="/deliveryreturns.html" id="deliveryReturns">Политика доставки и возврата</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="container">
+    <div class="card footer-card">
+      <p>© 2025 Магазин Товарчикофф. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-live="polite">
+    <div>Мы используем куки для улучшения работы сайта.</div>
+    <div>
+      <button class="button secondary-btn" id="cookieReject">Отклонить</button>
+      <button class="button buy-btn" id="cookieAccept">Принять</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

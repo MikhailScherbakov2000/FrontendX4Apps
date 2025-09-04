@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Товар — пример страницы</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <a href="/index.html" id="logo"><div class="logo">LOGO</div></a>
+            <div>
+                <div class="site-name">Магазин</div>
+                <div class="site-tagline">Товарчикофф</div>
+            </div>
+        </div>
+        <nav aria-label="Главное меню">
+            <nav aria-label="Главное меню">
+                <a href="/index.html">Каталог</a>
+                <a href="../about/about.html">О нас</a>
+                <a href="../contacts/contacts.html">Контакты</a>
+            </nav>
+
+        </nav>
+
+    </header>
+
+    <main class="container">
+        <section class="card product" aria-labelledby="product-title">
+            <div class="gallery" id="product-image" role="img" aria-label="Изображение товара"><img src="/img/apple.png" alt="apple"></div>
+
+            <div>
+                <h1 id="product-title">Яблоко</h1>
+                <div class="meta">
+                    <span class="price" id="price">100 ₽</span>
+                    <span class="old-price" id="old-price">70 ₽</span>
+                    <span class="stock" id="stock">В наличии</span>
+                </div>
+
+                <p class="description" id="description">
+                    Зеленое яблоко. Нажмите "Купить" чтобы добавить в корзину.
+                </p>
+
+                <div class="specs" aria-hidden="false">
+                    <div class="spec">Цвет: Зеленый</div>
+                    <div class="spec">Размер: Средний</div>
+                    <div class="spec">Вес: 150 грамм</div>
+                </div>
+
+                <div class="actions">
+                    <button class="button buy-btn" id="buyBtn" type="button">Купить — 100 ₽</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="card" aria-labelledby="order-form-title">
+            <h2 id="order-form-title">Оформление заказа</h2>
+            <form id="orderForm" novalidate>
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" required />
+
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" required />
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" />
+
+                <label for="quantity">Количество</label>
+                <select id="quantity" name="quantity">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <button class="button buy-btn" id="submitOrder" type="submit">Оформить заказ</button>
+
+                <div id="successPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle"
+                    aria-hidden="true">
+                    <div class="popup__dialog" role="document">
+                        <h2 id="popupTitle" class="popup__title">Заказ успешен</h2>
+                        <p class="popup__text">Спасибо! Ваш заказ принят.</p>
+                        <div class="popup__actions">
+                            <button id="closePopup" class="button">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="legal">
+                <a href="/terms.html" id="termsLink">Пользовательское соглашение</a>
+                <a href="/privacy.html" id="privacyLink">Политика конфиденциальности</a>
+                <a href="/deliveryreturns.html" id="deliveryReturns">Политика доставки и возврата</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="container">
+        <div class="card footer-card">
+            <p>© 2025 Магазин Товарчикофф. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-live="polite">
+        <div>Мы используем куки для улучшения работы сайта.</div>
+        <div>
+            <button class="button secondary-btn" id="cookieReject">Отклонить</button>
+            <button class="button buy-btn" id="cookieAccept">Принять</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
